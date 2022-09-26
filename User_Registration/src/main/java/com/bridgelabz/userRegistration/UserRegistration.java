@@ -33,4 +33,20 @@ public class UserRegistration {
         String lastName = scan.next();
         System.out.println(" Last name is valid : " + Pattern.matches("[A-Z][a-z]{2,}",lastName));
     }
+    /**
+     *  method to check for valid Email ID
+     */
+    public void validEmailId() {
+        /*
+         *  Taking user input for Email ID
+         *  Checking Whether email ID is valid or not for below conditions
+         *  Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in)
+         *  with precise @ and . positions
+         *  Given Email Example is  abc.xyz@bl.co.in
+         */
+        System.out.print("\n Enter Email ID : ");
+        String emailID = scan.next();
+        String regexPattern = "[a-zA-Z0-9]+([.][a-zA-z]+)*@[a-zA-Z0-9]+([.][a-zA-Z]+)+";
+        System.out.println(" Email ID is valid : " + Pattern.matches(regexPattern,emailID));
+    }
 }
