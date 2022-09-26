@@ -49,4 +49,20 @@ public class UserRegistration {
         String regexPattern = "[a-zA-Z0-9]+([.][a-zA-z]+)*@[a-zA-Z0-9]+([.][a-zA-Z]+)+";
         System.out.println(" Email ID is valid : " + Pattern.matches(regexPattern,emailID));
     }
+    /**
+     *  method to check for valid Mobile Number
+     */
+    public void validMobileNumber() {
+        /*
+         *  Taking user input for Mobile Number
+         *  Checking Whether Mobile Number is valid or not for below conditions
+         *  2 digit country code follow by space and 10 digits number
+         *  Example for Mobile Format is  "91 9919819801"
+         */
+        System.out.print("\n Enter Mobile Number : ");
+        scan.nextLine();
+        String mobileNumber = scan.nextLine();
+        String regexPattern = "\\d{2}\\s\\d{10}";
+        System.out.println(" Mobile Number is valid : " + Pattern.matches(regexPattern,mobileNumber));
+    }
 }

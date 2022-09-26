@@ -12,10 +12,12 @@ public class Main {
          *  calling validFirstName method
          *  calling validLastName method
          *  calling validEmailId method
+         *  calling validMobileNumber method
          */
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.validFirstName();
         userRegistration.validLastName();
         userRegistration.validEmailId();
+        userRegistration.validMobileNumber();
     }
 }
