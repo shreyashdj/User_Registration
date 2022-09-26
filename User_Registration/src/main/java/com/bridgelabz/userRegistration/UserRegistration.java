@@ -65,4 +65,18 @@ public class UserRegistration {
         String regexPattern = "\\d{2}\\s\\d{10}";
         System.out.println(" Mobile Number is valid : " + Pattern.matches(regexPattern,mobileNumber));
     }
+    /**
+     *  method to check for valid Mobile Number
+     */
+    public void validPassword() {
+        /*
+         *  Taking user input for Password
+         *  Checking Whether Password is valid or not for below conditions
+         *  It should contain minimum 8 characters
+         */
+        System.out.print("\n Enter Password : ");
+        String password = scan.next();
+        String regexPattern = "\\S{8,}";
+        System.out.println(" Mobile Number is valid : " + Pattern.matches(regexPattern,password));
+    }
 }
