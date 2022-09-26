@@ -16,8 +16,21 @@ public class UserRegistration {
          *  Checking Whether first name contains first letter Capital and else are small
          *  and should have minimum 3 characters
          */
-        System.out.print(" Enter First Name : ");
+        System.out.print("\n Enter First Name : ");
         String firstName = scan.next();
         System.out.println(" First name is valid : " + Pattern.matches("[A-Z][a-z]{2,}",firstName));
+    }
+    /**
+     *  method to check for valid last name
+     */
+    public void validLastName() {
+        /*
+         *  Taking user input for last name
+         *  Checking Whether last name contains first letter Capital and else are small
+         *  and should have minimum 3 characters
+         */
+        System.out.print("\n Enter Last Name : ");
+        String lastName = scan.next();
+        System.out.println(" Last name is valid : " + Pattern.matches("[A-Z][a-z]{2,}",lastName));
     }
 }

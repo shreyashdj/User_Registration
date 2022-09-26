@@ -10,8 +10,10 @@ public class Main {
         /*
          *  created object of class UserRegistration
          *  calling validFirstName method
+         *  calling validLastName method
          */
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.validFirstName();
+        userRegistration.validLastName();
     }
 }
