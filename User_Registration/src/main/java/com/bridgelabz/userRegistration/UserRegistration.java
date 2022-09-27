@@ -46,7 +46,7 @@ public class UserRegistration {
          */
         System.out.print("\n Enter Email ID : ");
         String emailID = scan.next();
-        String regexPattern = "[a-zA-Z0-9]+([.][a-zA-z]+)*@[a-zA-Z0-9]+([.][a-zA-Z]+)+";
+        String regexPattern = "[A-z\\d]+[.]?[-+A-z\\d]+@[A-z\\d]+[.]?[A-z]*[.][A-z,]{2,}";
         System.out.println(" Email ID is valid : " + Pattern.matches(regexPattern,emailID));
     }
     /**

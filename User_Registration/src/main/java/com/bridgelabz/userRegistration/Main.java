@@ -16,10 +16,11 @@ public class Main {
          *  calling validPassword method
          */
         UserRegistration userRegistration = new UserRegistration();
-//        userRegistration.validFirstName();
-//        userRegistration.validLastName();
-//        userRegistration.validEmailId();
-//        userRegistration.validMobileNumber();
+        userRegistration.validFirstName();
+        userRegistration.validLastName();
+        userRegistration.validEmailId();
+        userRegistration.validMobileNumber();
         userRegistration.validPassword();
+
     }
 }
