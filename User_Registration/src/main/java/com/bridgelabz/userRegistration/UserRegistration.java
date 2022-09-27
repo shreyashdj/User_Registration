@@ -73,11 +73,11 @@ public class UserRegistration {
          *  Taking user input for Password
          *  Checking Whether Password is valid or not for below conditions
          *  It should have minimum 8 characters and At least 1 Upper Case
-         *  It should have At least 1 numeric number
+         *  It should have At least 1 numeric number and exactly 1 special character
          */
         System.out.print("\n Enter Password : ");
         String password = scan.next();
-        String regexPattern = "^(?=.{8,})(?=.*?[A-Z])(?=.*?\\d).*$";
+        String regexPattern = "^(?=.{8,})(?=.*?[A-Z])(?=.*?\\d)(?=.*\\W).*$";
         System.out.println(" Password is valid : " + Pattern.matches(regexPattern,password));
     }
 }
