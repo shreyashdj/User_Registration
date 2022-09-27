@@ -66,17 +66,17 @@ public class UserRegistration {
         System.out.println(" Mobile Number is valid : " + Pattern.matches(regexPattern,mobileNumber));
     }
     /**
-     *  method to check for valid Mobile Number
+     *  method to check for valid Password
      */
     public void validPassword() {
         /*
          *  Taking user input for Password
          *  Checking Whether Password is valid or not for below conditions
-         *  It should contain minimum 8 characters
+         *  It should contain minimum 8 characters and At least 1 Upper Case
          */
         System.out.print("\n Enter Password : ");
         String password = scan.next();
-        String regexPattern = "\\S{8,}";
-        System.out.println(" Mobile Number is valid : " + Pattern.matches(regexPattern,password));
+        String regexPattern = "^(?=.{8,})(?=.*?[A-Z]).*$";
+        System.out.println(" Password is valid : " + Pattern.matches(regexPattern,password));
     }
 }
