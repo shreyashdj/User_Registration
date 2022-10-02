@@ -1,83 +1,80 @@
 package com.bridgelabz.userRegistration;
 
-import java.util.Scanner;
 import java.util.regex.Pattern;
 /**
  *  author Shreyash Jadhav
  */
 public class UserRegistration {
-    Scanner scan = new Scanner(System.in);      // scan object of Scanner class
     /**
-     *  method to check for valid first name
+     *  created validFirstName method to check for valid first name and method have return type boolean
      */
-    public void validFirstName() {
+    public boolean validFirstName() {
         /*
-         *  Taking user input for first name
+         *  Taking first name as "Shreyash"
          *  Checking Whether first name contains first letter Capital and else are small
          *  and should have minimum 3 characters
+         *  if Pattern matches firstName return true else return false
          */
-        System.out.print("\n Enter First Name : ");
-        String firstName = scan.next();
-        System.out.println(" First name is valid : " + Pattern.matches("[A-Z][a-z]{2,}",firstName));
+        String firstName = "Shreyash";
+        return Pattern.matches("[A-Z][a-z]{2,}",firstName);
     }
     /**
-     *  method to check for valid last name
+     *  created validLastName method to check for valid last name and method have return type boolean
      */
-    public void validLastName() {
+    public boolean validLastName() {
         /*
-         *  Taking user input for last name
+         *  Taking last name as "Jadhav"
          *  Checking Whether last name contains first letter Capital and else are small
          *  and should have minimum 3 characters
+         *  if Pattern matches lastName return true else return false
          */
-        System.out.print("\n Enter Last Name : ");
-        String lastName = scan.next();
-        System.out.println(" Last name is valid : " + Pattern.matches("[A-Z][a-z]{2,}",lastName));
+        String lastName = "Jadhav";
+        return Pattern.matches("[A-Z][a-z]{2,}",lastName);
     }
     /**
-     *  method to check for valid Email ID
+     * created validEmailId method to check for valid Email ID and method have return type boolean
      */
-    public void validEmailId() {
+    public boolean validEmailId() {
         /*
-         *  Taking user input for Email ID
+         *  Taking Email ID as "shreyash1234@gmail.com"
          *  Checking Whether email ID is valid or not for below conditions
          *  Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in)
          *  with precise @ and . positions
          *  Given Email Example is  abc.xyz@bl.co.in
+         *  if Pattern matches emailID return true else return false
          */
-        System.out.print("\n Enter Email ID : ");
-        String emailID = scan.next();
+        String emailID = "shreyash1234@gmail.com";
         String regexPattern = "[A-z\\d]+[.]?[-+A-z\\d]+@[A-z\\d]+[.]?[A-z]*[.][A-z,]{2,}";
-        System.out.println(" Email ID is valid : " + Pattern.matches(regexPattern,emailID));
+        return Pattern.matches(regexPattern,emailID);
     }
     /**
-     *  method to check for valid Mobile Number
+     * created validMobileNumber method to check for valid Mobile Number and method have return type boolean
      */
-    public void validMobileNumber() {
+    public boolean validMobileNumber() {
         /*
-         *  Taking user input for Mobile Number
+         *  Taking Mobile Number "91 9876543210"
          *  Checking Whether Mobile Number is valid or not for below conditions
          *  2 digit country code follow by space and 10 digits number
          *  Example for Mobile Format is  "91 9919819801"
+         *  if Pattern matches mobileNumber return true else return false
          */
-        System.out.print("\n Enter Mobile Number : ");
-        scan.nextLine();
-        String mobileNumber = scan.nextLine();
+        String mobileNumber = "91 9876543210";
         String regexPattern = "\\d{2}\\s\\d{10}";
-        System.out.println(" Mobile Number is valid : " + Pattern.matches(regexPattern,mobileNumber));
+        return Pattern.matches(regexPattern,mobileNumber);
     }
     /**
-     *  method to check for valid Password
+     * created validPassword method to check for valid Password and method have return type boolean
      */
-    public void validPassword() {
+    public boolean validPassword() {
         /*
-         *  Taking user input for Password
+         *  Taking Password as "Shreyash@12345"
          *  Checking Whether Password is valid or not for below conditions
          *  It should have minimum 8 characters and At least 1 Upper Case
          *  It should have At least 1 numeric number and exactly 1 special character
+         *  if Pattern matches password return true else return false
          */
-        System.out.print("\n Enter Password : ");
-        String password = scan.next();
+        String password = "Shreyash@12345";
         String regexPattern = "^(?=.{8,})(?=.*?[A-Z])(?=.*?\\d)(?=.*\\W).*$";
-        System.out.println(" Password is valid : " + Pattern.matches(regexPattern,password));
+        return Pattern.matches(regexPattern,password);
     }
 }
