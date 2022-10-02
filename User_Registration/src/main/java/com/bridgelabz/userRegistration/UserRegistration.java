@@ -34,7 +34,7 @@ public class UserRegistration {
     /**
      * created validEmailId method to check for valid Email ID and method have return type boolean
      */
-    public boolean validEmailId() {
+    public boolean validEmailId(String emailID) {
         /*
          *  Taking Email ID as "shreyash1234@gmail.com"
          *  Checking Whether email ID is valid or not for below conditions
@@ -43,7 +43,6 @@ public class UserRegistration {
          *  Given Email Example is  abc.xyz@bl.co.in
          *  if Pattern matches emailID return true else return false
          */
-        String emailID = "shreyash1234@gmail.com";
         String regexPattern = "[A-z\\d]+[.]?[-+A-z\\d]+@[A-z\\d]+[.]?[A-z]*[.][A-z,]{2,}";
         return Pattern.matches(regexPattern,emailID);
     }

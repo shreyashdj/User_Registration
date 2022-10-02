@@ -2,6 +2,8 @@ package com.bridgelabz.userRegistration;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 /**
  * @author - Shreyash Jadhav
@@ -67,15 +69,16 @@ public class UserRegistrationTest {
     /**
      *  created validEmailIdTest method to test for valid EmailId
      */
-    @Test
-    public void validEmailIdTest(){
+    @ParameterizedTest
+    @ValueSource(strings = {"abc@yahoo.com", "abc-100@yahoo.com", "abc@1.com", "abc+100@gmail.com"})
+    public void validEmailIdTest(String emailId){
         /*
          *  calling validEmailId method and
          *  using assertTrue method of class Assertions
          *  checking expected (true) and actual output are equal or not
          *  if true then Test passed otherwise failed
          */
-        boolean result = userRegistration.validEmailId();
+        boolean result = userRegistration.validEmailId(emailId);
         Assertions.assertTrue(result);
     }
 }
