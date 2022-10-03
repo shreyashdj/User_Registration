@@ -14,7 +14,7 @@ public class UserRegistrationTest {
      *  created validFirstNameTest method to test for valid first name
      */
     @Test
-    public void validFirstNameTest(){
+    public void validFirstNameTest() throws CustomException {
         /*
          *  calling validFirstName method and
          *  using assertTrue method of class Assertions
@@ -28,7 +28,7 @@ public class UserRegistrationTest {
      *  created validLastNameTest method to test for valid last name
      */
     @Test
-    public void validLastNameTest(){
+    public void validLastNameTest() throws CustomException {
         /*
          *  calling validLastName method and
          *  using assertTrue method of class Assertions
@@ -42,7 +42,7 @@ public class UserRegistrationTest {
      *  created validMobileNumberTest method to test for valid MobileNumber
      */
     @Test
-    public void validMobileNumberTest(){
+    public void validMobileNumberTest() throws CustomException {
         /*
          *  calling validMobileNumber method and
          *  using assertTrue method of class Assertions
@@ -56,7 +56,7 @@ public class UserRegistrationTest {
      *  created validPasswordTest method to test for valid Password
      */
     @Test
-    public void validPasswordTest(){
+    public void validPasswordTest() throws CustomException {
         /*
          *  calling validPassword method and
          *  using assertTrue method of class Assertions
@@ -68,10 +68,11 @@ public class UserRegistrationTest {
     }
     /**
      *  created validEmailIdTest method to test for valid EmailId
+     *  used ParameterizedTest and ValueSource to test multiple EmailID's
      */
     @ParameterizedTest
-    @ValueSource(strings = {"abc@yahoo.com", "abc-100@yahoo.com", "abc@1.com", "abc+100@gmail.com"})
-    public void validEmailIdTest(String emailId){
+    @ValueSource(strings = {"abc@yahoo.com", "abc-100@yahoo.com", "abc1.com", "abc+100@gmail.com"})
+    public void validEmailIdTest(String emailId) throws CustomException {
         /*
          *  calling validEmailId method and
          *  using assertTrue method of class Assertions
