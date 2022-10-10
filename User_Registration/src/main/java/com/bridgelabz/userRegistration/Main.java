@@ -6,7 +6,7 @@ public class Main {
     /**
      *  main method to run project
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CustomException {
         /*
          *  created object of class UserRegistration
          *  calling validFirstName method
@@ -18,7 +18,7 @@ public class Main {
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.validFirstName();
         userRegistration.validLastName();
-        userRegistration.validEmailId();
+        userRegistration.validEmailId("");
         userRegistration.validMobileNumber();
         userRegistration.validPassword();
 
